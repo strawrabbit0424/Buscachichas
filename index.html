@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>BUSCACHICHAS</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  
+  <h1 class="glitch" data-text="BUSCACHICHAS">BUSCACHICHAS</h1>
+
+</header>
+
+<div class="app">
+
+  <div class="panel">
+    <p class="panel-title">Dificultad</p>
+    <div class="diff-row" id="diffRow"></div>
+  </div>
+
+  <div class="panel">
+    <div class="stats-bar">
+      <div class="stat" id="statMines">010<span>Minas</span></div>
+      <button class="face-btn" id="resetBtn" title="Reiniciar"></button>
+      <div class="stat" id="statTime">000<span>Segundos</span></div>
+    </div>
+    <div style="display:flex; justify-content:center; margin-bottom:12px;">
+      <div class="flag-mode-toggle" id="flagModeToggle">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 21V4M5 4h13l-3 4 3 4H5"/></svg>
+        Modo bandera
+      </div>
+    </div>
+    <div class="board-scroll">
+      <div class="board" id="board"></div>
+    </div>
+    <div class="status-line" id="statusLine"></div>
+    <div class="result-panel" id="resultPanel"></div>
+  </div>
+
+  <div class="panel">
+    <p class="panel-title">Mejores tiempos</p>
+    <div class="lb-tabs" id="lbTabs"></div>
+    <div id="lbBody"></div>
+  </div>
+
+</div>
+
+<footer>clic para revelar &middot; clic derecho o modo bandera para marcar</footer>
+
+<!-- Cliente de Supabase (SDK oficial vía CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script type="module" src="js/game.js"></script>
+</body>
+</html>
